@@ -1,0 +1,4 @@
+{
+  "analyzer": "standard",
+  "default_analyzer": "keyword"
+}

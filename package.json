@@ -1,0 +1,42 @@
+{
+  "name": "couchman",
+  "version": "1.0.0",
+  "description": "Manage CouchDB 3 design documents as files in your repository.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "couchman": "bin/couchman.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./shared/normalize.js": "./shared/normalize.js",
+    "./package.json": "./package.json"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "bin",
+    "src",
+    "shared"
+  ],
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:integration": "vitest run --config vitest.integration.config.js",
+    "gen:normalize": "node scripts/gen-normalize.js"
+  },
+  "dependencies": {
+    "@babel/core": "^8.0.1",
+    "@babel/preset-env": "^8.0.2",
+    "commander": "^12.1.0",
+    "esbuild": "^0.28.1",
+    "nano": "^11.0.6",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "remove-accents": "^0.5.0",
+    "testcontainers": "^12.1.0",
+    "vitest": "^4.1.10"
+  }
+}

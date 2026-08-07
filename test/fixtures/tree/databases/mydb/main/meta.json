@@ -1,0 +1,8 @@
+{
+  "language": "javascript",
+  "options": { "partitioned": false },
+  "autoupdate": true,
+  "views": {
+    "by_type": { "reduce": "_count" }
+  }
+}
